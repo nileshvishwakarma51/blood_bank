@@ -5,36 +5,65 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>About</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-	crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/images/fav.jpg">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+        <link rel="stylesheet" href="assets/plugins/grid-gallery/css/grid-gallery.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 <body>
 
 	<!-- Nav Bar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="index.jsp">Home</a>
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link active"
-						href="pending_stocks.jsp">Pending_stocks</a></li>
-					<li class="nav-item"><a class="nav-link active"
-						href="contact.jsp">Contact Us</a></li>
-					<li class="nav-item"><a class="nav-link active"
-						href="about.jsp" tabindex="-1" aria-disabled="true">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+    <header class="continer-fluid ">
+
+            <div id="menu-jk" class="header-bottom">
+                <div class="container">
+                    <div class="row nav-row">
+                        <div class="col-md-3 logo">
+                            <img src="assets/images/logo.jpg" alt="">
+                        </div>
+                        <div class="col-md-9 nav-col">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbarNav"
+                                    aria-controls="navbarNav"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="index.jsp">Home
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about.jsp">About Us</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.jsp">Gallery</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.jsp">Process</a>
+                                        </li>
+                                      
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.jsp">Contact US</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
 	<div class="about-section">
 		<h1>About Us...</h1>
