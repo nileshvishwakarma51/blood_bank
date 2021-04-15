@@ -175,7 +175,7 @@
                                     <input type="text" placeholder="Enter Email Adreess" class="form-control">
                                 </div>
                                 <div class="row form-row">
-                                    <input id="dat" type="text" placeholder="Appointment Date" class="form-control">
+                                    <input  type="date" placeholder="Appointment Date" class="form-control">
                                 </div>
 
                                 <h6>Address Details</h6>
