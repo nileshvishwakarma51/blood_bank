@@ -3,101 +3,104 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
+        <link href="http://code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="shortcut icon" href="assets/images/fav.jpg">
+        <link rel="shortcut icon" href="assets/images/fav.jpg">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
         <link rel="stylesheet" href="assets/plugins/grid-gallery/css/grid-gallery.min.css">
-          <link rel="stylesheet" href="assets/css/datepicker.css">
+        <link rel="stylesheet" href="assets/css/datepicker.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             body{
-	width: 100%;
-	height:auto;
-	overflow: auto;
-	background-image: url(backgroun.jpg);
-}
-.inner-layer{
-	position: absolute;
-	width: 100%;
-	height:100%;
-	background-color: rgba(0,147,173,0.7);
-	overflow: auto;
-}
-.form-data{
-	margin-top: 21%;
-	background-color: #FFF;
-	
-}
-.form-body{
-	padding: 20px;
-}
-.form-head{
-	padding: 10px;
-	border-bottom: 1px solid #CCC;
-}
-.form-head h2{
-	font-size: 22px;
-	font-weight: 600;
-}
-.no-margin{
-	margin: 0px;
-}
+                width: 100%;
+                height:auto;
+                overflow: auto;
+                background-image: url(backgroun.jpg);
+            }
+            .inner-layer{
+                position: absolute;
+                width: 100%;
+                height:100%;
+                background-color: rgba(0,147,173,0.7);
+                overflow: auto;
+            }
+            .form-data{
+                margin-top: 21%;
+                background-color: #FFF;
 
-.form-row{
-	margin-bottom: 15px;
-}
-.form-control{
-	background-color: #f7f7ff;
-	border-radius: 0px;
+            }
+            .form-body{
+                padding: 20px;
+            }
+            .form-head{
+                padding: 10px;
+                border-bottom: 1px solid #CCC;
+            }
+            .form-head h2{
+                font-size: 22px;
+                font-weight: 600;
+            }
+            .no-margin{
+                margin: 0px;
+            }
 
-}
-.form-control:focus{
-	box-shadow: none;
-	border: 3px solid #138496;
-}
-.btn-appointment{
-	background-color: #138496 !important;
-	border-color: #138496 !important;
-	width: 100%;
-}
-.content{
-	margin-top: 15%;
-	text-align: center;
-	color: #FFF;
-	padding: 30px;
-}
-.content h1{
-	font-weight: 600;
-	font-size: 3.5rem;
-}
-.content h2{
-	font-weight: 600;
-	font-size:2.5rem;
-	margin-top: 20px;
-}
-.content p{
-	font-size: 22px;
-	margin-top: 20px;
-}
-.datepicker td, .datepicker th{
-	padding: 5px;
-}
-.dropdown-menu.datepicker{
-	max-width: 300px !important;
-}
+            .form-row{
+                margin-bottom: 15px;
+            }
+            .form-control{
+                background-color: #f7f7ff;
+                border-radius: 0px;
+
+            }
+            .form-control:focus{
+                box-shadow: none;
+                border: 3px solid #138496;
+            }
+            .btn-appointment{
+                background-color: #138496 !important;
+                border-color: #138496 !important;
+                width: 100%;
+            }
+            .content{
+                margin-top: 15%;
+                text-align: center;
+                color: #FFF;
+                padding: 30px;
+            }
+            .content h1{
+                font-weight: 600;
+                font-size: 3.5rem;
+            }
+            .content h2{
+                font-weight: 600;
+                font-size:2.5rem;
+                margin-top: 20px;
+            }
+            .content p{
+                font-size: 22px;
+                margin-top: 20px;
+            }
+            .datepicker td, .datepicker th{
+                padding: 5px;
+            }
+            .dropdown-menu.datepicker{
+                max-width: 300px !important;
+            }
 
 
-@media screen and (max-width: 976px){
-	
-}
+            @media screen and (max-width: 976px){
+
+            }
         </style>
     </head>
 
     <body>
-             <header class="continer-fluid ">
+        <header class="continer-fluid ">
 
             <div id="menu-jk" class="header-bottom">
                 <div class="container">
@@ -134,7 +137,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="index.jsp">Process</a>
                                         </li>
-                                      
+
                                         <li class="nav-item">
                                             <a class="nav-link" href="index.jsp">Contact US</a>
                                         </li>
@@ -146,9 +149,9 @@
                 </div>
             </div>
         </header>
-        
-        
-        
+
+
+
         <div class="inner-layer">
             <div class="container">
                 <div class="row no-margin">
@@ -159,6 +162,7 @@
                             <h2>For Help Call : +189-123-453</h2>
                         </div>
                     </div>
+                    
                     <div class="col-sm-5">
                         <div class="form-data">
                             <div class="form-head">
@@ -167,6 +171,7 @@
                             <div class="form-body">
                                 <div class="row form-row">
                                     <input type="text" placeholder="Enter Full name" class="form-control">
+                                    
                                 </div>
                                 <div class="row form-row">
                                     <input type="text" placeholder="Enter Mobile Number" class="form-control">
@@ -175,7 +180,16 @@
                                     <input type="text" placeholder="Enter Email Adreess" class="form-control">
                                 </div>
                                 <div class="row form-row">
-                                    <input id="dat" type="text" placeholder="Appointment Date" class="form-control">
+                                    <input type="text" placeholder="Enter Your Blood Group" class="form-control">
+                                </div>
+                                <div class="row form-row">
+                                    <input id="dat" name="Date" type="date" placeholder="Appointment Date" class="form-control" >
+                                    <div class="valid-feedback" style="display: none;">
+                                       Date Is Available!
+                                    </div>
+                                     <div class="invalid-feedback" style="display: none;">
+                                       Date Is Not Available!
+                                    </div>
                                 </div>
 
                                 <h6>Address Details</h6>
@@ -198,7 +212,7 @@
                                 </div>
 
                                 <div class="row form-row">
-                                    <button class="btn btn-success btn-appointment">
+                                    <button class="btn btn-success btn-appointment" disabled id="subbtn">
                                         Book Appointment
                                     </button>
 
@@ -216,18 +230,59 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="js/myjs.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function () {
-            $("#dat").datepicker();
-        })
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/myjs.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementsByName("Date")[0].setAttribute('min', today);
+        var date_input = document.getElementById('dat');
+        
+
+        date_input.onchange = function () {
+            var date = new Date($('#dat').val());
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+            var appoint_date = [year, month, day].join('-');
+           
+
+            $.ajax({
+
+                url: "check_date.jsp",
+                method: "POST",
+                data: {date: appoint_date},
+                success: function (data)
+                {
+                    if (data < 1)
+                    {
+                        $("#dat").addClass("is-valid");
+                        $(".valid-feedback").css("display","block");
+                        
+                         $("#dat").removeClass(".is-invalid");
+                        $(".invalid-feedback").css("display","none");
+                        $('#subbtn').removeAttr('disabled');
+                    }
+                    else
+                    {
+                         $("#dat").removeClass("is-valid");
+                        $(".valid-feedback").css("display","none");
+                        
+                         $("#dat").addClass(".is-invalid");
+                        $(".invalid-feedback").css("display","block");
+                        $('#subbtn').attr('disabled','disabled');
+                    }
+                }
+            });
+
+
+        }
     </script>
-<script src="assets/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
 </body>
 </html>
