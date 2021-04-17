@@ -168,22 +168,23 @@
                             <div class="form-head">
                                 <h2>Book Appointemnt</h2>
                             </div>
+                            <form action="get_appointment.jsp" method="POST">
                             <div class="form-body">
                                 <div class="row form-row">
-                                    <input type="text" placeholder="Enter Full name" class="form-control">
+                                    <input type="text" placeholder="Enter Full name" class="form-control" name="full_name" required>
                                     
                                 </div>
                                 <div class="row form-row">
-                                    <input type="text" placeholder="Enter Mobile Number" class="form-control">
+                                    <input type="tel" placeholder="Enter Mobile Number" class="form-control" name="phone" required>
                                 </div>
                                 <div class="row form-row">
-                                    <input type="text" placeholder="Enter Email Adreess" class="form-control">
+                                    <input type="text" placeholder="Enter Email Adreess" class="form-control" name="email">
                                 </div>
                                 <div class="row form-row">
-                                    <input type="text" placeholder="Enter Your Blood Group" class="form-control">
+                                    <input type="text" placeholder="Enter Your Blood Group" class="form-control" name="blood_grp">
                                 </div>
                                 <div class="row form-row">
-                                    <input id="dat" name="Date" type="date" placeholder="Appointment Date" class="form-control" >
+                                    <input id="dat" name="Date" type="date" placeholder="Appointment Date" class="form-control"  required>
                                     <div class="valid-feedback" style="display: none;">
                                        Date Is Available!
                                     </div>
@@ -196,23 +197,23 @@
 
                                 <div class="row form-row">
                                     <div class="col-sm-6">
-                                        <input type="text" placeholder="Enter Area" class="form-control">
+                                        <input type="text" placeholder="Enter Area" class="form-control" name="area" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" placeholder="Enter City" class="form-control">
+                                        <input type="text" placeholder="Enter City" class="form-control" name="city" required>
                                     </div>
                                 </div>
                                 <div class="row form-row">
                                     <div class="col-sm-6">
-                                        <input type="text" placeholder="Enter State" class="form-control">
+                                        <input type="text" placeholder="Enter State" class="form-control" name="state" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" placeholder="Postal Code" class="form-control">
+                                        <input type="text" placeholder="Postal Code" class="form-control" name="pin_code" required>
                                     </div>
                                 </div>
 
                                 <div class="row form-row">
-                                    <button class="btn btn-success btn-appointment" disabled id="subbtn">
+                                    <button class="btn btn-success btn-appointment" disabled id="subbtn" type="submit">
                                         Book Appointment
                                     </button>
 
@@ -220,6 +221,7 @@
 
 
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
