@@ -12,9 +12,9 @@
     code = request.getParameter("pin_code");
     address=area+","+city+","+state+","+code;
     qry="INSERT INTO `request` (`id`,`name`, `mob`, `email`, `bloodgroup`, `appointment_date`, `address`) VALUES ('"+name+phone+"','"+name+"', '"+phone+"', '"+email+"', '"+blood_grp+"', '"+appointment+"', '"+address+"')";
-
-    dbutil.DButil.insert(qry);
     
+    dbutil.DButil.insert(qry);
+    session.setAttribute("phone",phone);
     response.sendRedirect("recipt.jsp");
     
 %>

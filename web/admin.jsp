@@ -30,8 +30,9 @@
     <body>
 
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand">Admin Panel</a> <a
-                class="btn btn-primary btn-lg" href="index.jsp" target="self"
+            <a class="navbar-brand">Admin Panel</a> 
+            
+            <a class="btn btn-primary btn-lg" href="index.jsp" target="self"
                 role="button">Logout</a>
         </nav>
 

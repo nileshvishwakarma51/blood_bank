@@ -1,3 +1,13 @@
+<%
+    String phone=(String)session.getAttribute("phone");
+    if(phone==null)
+    {
+        response.sendRedirect("appointment.jsp");
+    }
+    else
+    {
+%>
+
 <%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html>
@@ -228,7 +238,7 @@
 
 
         <%
-        ResultSet rs=dbutil.DButil.read("SELECT * FROM `request` WHERE `mob` = '9977548991'");
+        ResultSet rs=dbutil.DButil.read("SELECT * FROM `request` WHERE `mob` = '"+phone+"'");
         rs.next();
         %>
 
@@ -343,3 +353,4 @@
 
     </body>
 </html>
+<%}%>
