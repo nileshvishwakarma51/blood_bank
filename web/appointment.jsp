@@ -183,8 +183,8 @@
                                 
                                  <div class="row form-row">
                                         <select class="form-control" name="blood_grp">
-                                            <option selected disabled>Select You Blood Group</option>
-                                            <option value="">A+</option>
+                                            <option selected disabled>Select Your Blood Group</option>
+                                            <option value="A+">A+</option>
                                             <option value="A-">A-</option>
                                             <option value="B+">B+</option>
                                             <option value="B-">B-</option>

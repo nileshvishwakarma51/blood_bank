@@ -123,35 +123,12 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 style="text-align: center;"><b>SIGN UP</b></h2>
+                        <h2 style="text-align: center;"><b>Update Donor's Profile</b></h2>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                     </div>
                     <div class="modal-body">
-                        <form role="form" action="DriverRegister.jsp" method="post">
-                            <div class="form-group">
-                                <label for="email"> Name:</label>
-                                <input type="text" class="form-control" name="Name" id="email" placeholder="Enter Name" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">UserId:</label>
-                                <input type="text" class="form-control" name="userid" id="email" placeholder="Enter userID" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Phone:</label>
-                                <input type="text" class="form-control" name="phone" id="pwd" placeholder="Enter Phone no" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Password:</label>
-                                <input type="password" class="form-control" name="password" id="pwd" placeholder="Enter password" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Confirm Password:</label>
-                                <input type="password" class="form-control" name="confirmpassword" id="compwd" placeholder="Enter password again" required>
-                            </div>
-                            <button type="submit" class="btn btn-default"><b>Submit</b></button>
-                        </form>
+                        
                     </div>
                 </div>
 
@@ -203,10 +180,11 @@
                     data: {id: id},
                     success: function (data)
                     {
+                        
                         var result = $.trim(data);
-                        if (result==="true") {
-                            $("#aptmodel").click();
-
+                        if ($.trim(data)) {
+                           $('.modal-body').html(data);
+                               $("#aptmodel").click();
                         } else {
 
                             $("#result").html("Not found");
