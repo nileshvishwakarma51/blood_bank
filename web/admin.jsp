@@ -35,7 +35,7 @@
         <p></p>
         <div class="container" style="max-width: 70%;">
             <h1>Welcome Admin</h1>
-            <div class="alert alert-success " role="alert" id="sucessalert" style="display: none;">
+            <div class="alert alert-success " role="alert" id="sucessalert" style="display: none; position: absolute;">
                
                 <strong>Successfull!</strong>&nbsp;Stock Updated successfully.
             </div>
@@ -144,7 +144,7 @@
                     {
 
                         document.getElementById(grp + "z").innerHTML = data + " Units Available";
-                        document.getElementById(grp).value = "0";
+                        document.getElementById(grp).value = "";
 //                        document.getElementById("sucessalert").style.display = "block";
                             $("#sucessalert").fadeIn();
                         setTimeout(function(){
@@ -168,7 +168,7 @@
                     success: function (data)
                     {
                         document.getElementById(grp + "z").innerHTML = data + " Units Available";
-                        document.getElementById(grp).value = "0";
+                        document.getElementById(grp).value = "";
                           $("#sucessalert").fadeIn();
                         setTimeout(function(){
                         $("#sucessalert").fadeOut();
