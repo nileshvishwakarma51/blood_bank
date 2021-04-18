@@ -166,23 +166,21 @@
                     <div class="col-sm-5">
                         <div class="form-data">
                             <div class="form-head">
-                                <h2>Book Appointemnt</h2>
+                                <h2>Request For Blood</h2>
                             </div>
-                            <form action="get_appointment.jsp" method="POST">
+                            <div class="form">
                                 <div class="form-body">
                                     <div class="row form-row">
-                                        <input type="text" placeholder="Enter Full name" class="form-control" name="full_name" required>
+                                        <input type="text" placeholder="Enter Full name" id="name" class="form-control" name="full_name" required>
 
                                     </div>
                                     <div class="row form-row">
-                                        <input type="tel" placeholder="Enter Mobile Number" class="form-control" name="phone" required>
-                                    </div>
-                                    <div class="row form-row">
-                                        <input type="text" placeholder="Enter Email Adreess" class="form-control" name="email">
+                                        <input type="tel" placeholder="Enter Mobile Number"  id="phone" class="form-control" name="phone" required>
                                     </div>
 
+
                                     <div class="row form-row">
-                                        <select class="form-control" name="blood_grp">
+                                        <select id="bloodtype" class="form-control" name="blood_grp">
                                             <option selected disabled>Select Your Blood Group</option>
                                             <option value="A+">A+</option>
                                             <option value="A-">A-</option>
@@ -191,51 +189,26 @@
                                             <option value="AB+">AB+</option>
                                             <option value="AB-">AB-</option>
                                             <option value="O+">O+</option>
-                                            <option value="O-">O-</option>
-                                            <option class="text-danger" value="">Not Sure</option>
+                                            <option value="O-">O-</option>                                      
                                         </select>
                                     </div>
 
-
                                     <div class="row form-row">
-                                        <input id="dat" name="Date" type="date" placeholder="Appointment Date" class="form-control"  required>
-                                        <div class="valid-feedback" style="display: none;">
-                                            Date Is Available!
-                                        </div>
-                                        <div class="invalid-feedback" style="display: none;">
-                                            Date Is Not Available!
-                                        </div>
+                                        <input  id="bloodunit" type="number" placeholder="Enter Blood Units" class="form-control" name="phone" required>
                                     </div>
+                                    <div id="result"> </div>
 
-                                    <h6>Address Details</h6>
-
-                                    <div class="row form-row">
-                                        <div class="col-sm-6">
-                                            <input type="text" placeholder="Enter Area" class="form-control" name="area" required>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <input type="text" placeholder="Enter City" class="form-control" name="city" required>
-                                        </div>
-                                    </div>
-                                    <div class="row form-row">
-                                        <div class="col-sm-6">
-                                            <input type="text" placeholder="Enter State" class="form-control" name="state" required>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <input type="text" placeholder="Postal Code" class="form-control" name="pin_code" required>
-                                        </div>
-                                    </div>
 
                                     <div class="row form-row">
-                                        <button class="btn btn-success btn-appointment" disabled id="subbtn" type="submit">
-                                            Book Appointment
+                                        <button class="btn btn-success btn-appointment"  id="subbtn" >
+                                            Submit
                                         </button>
 
                                     </div>
 
 
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -255,48 +228,28 @@
     <script src="js/myjs.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-        var today = new Date().toISOString().split('T')[0];
-        document.getElementsByName("Date")[0].setAttribute('min', today);
-        var date_input = document.getElementById('dat');
 
+        $(document).ready(function () {
+            $("#subbtn").click(function () {
+                var blood = $('#bloodtype :selected').text();
+                var unit = $("#bloodunit").val();
+                var name = $("#name").val();
+                var phone = $("#phone").val();
+                     $.ajax({
 
-        date_input.onchange = function () {
-            var date = new Date($('#dat').val());
-            var day = date.getDate();
-            var month = date.getMonth() + 1;
-            var year = date.getFullYear();
-            var appoint_date = [year, month, day].join('-');
-
-
-            $.ajax({
-
-                url: "check_date.jsp",
+                url: "check_unit.jsp",
                 method: "POST",
-                data: {date: appoint_date},
+                data: {blood:blood,unit:unit,name:name,phone:phone},
                 success: function (data)
                 {
-                    if (data < 1)
-                    {
-                        $("#dat").addClass("is-valid");
-                        $(".valid-feedback").css("display", "block");
-
-                        $("#dat").removeClass(".is-invalid");
-                        $(".invalid-feedback").css("display", "none");
-                        $('#subbtn').removeAttr('disabled');
-                    } else
-                    {
-                        $("#dat").removeClass("is-valid");
-                        $(".valid-feedback").css("display", "none");
-
-                        $("#dat").addClass(".is-invalid");
-                        $(".invalid-feedback").css("display", "block");
-                        $('#subbtn').attr('disabled', 'disabled');
-                    }
+                    $("#result").html(data);
                 }
             });
+            });
+
+        });
 
 
-        }
     </script>
     <script src="assets/js/bootstrap-datepicker.js"></script>
 </body>

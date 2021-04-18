@@ -98,7 +98,7 @@
         </div>
         <div class="container center mt-5 mb-5 ">
             <button class="btn btn-danger  bounceInUp mr-3" onclick="window.location.href='appointment.jsp'"> Donate Now </button>
-            <button  class="btn btn-danger  bounceInUp">  Request Blood </button>
+            <button  class="btn btn-danger  bounceInUp" onclick="window.location.href='request_blood.jsp'">  Request Blood </button>
         </div>
 
         <!--*************** About Us Starts Here ***************-->

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2021 at 07:18 AM
+-- Generation Time: Apr 18, 2021 at 07:44 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `bloodbank`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blood_request`
+--
+
+CREATE TABLE `blood_request` (
+  `id` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `bloodtype` varchar(50) NOT NULL,
+  `units` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blood_request`
+--
+
+INSERT INTO `blood_request` (`id`, `name`, `phone`, `bloodtype`, `units`) VALUES
+('praj94054', 'prajwal patil', '9340294054', 'A+', 11);
 
 -- --------------------------------------------------------
 
@@ -67,14 +88,22 @@ CREATE TABLE `request` (
 --
 
 INSERT INTO `request` (`id`, `name`, `mob`, `email`, `bloodgroup`, `appointment_date`, `address`, `isDonated`) VALUES
+('pin42343', 'pintu', '3242342343', 'null', 'null', 'null', 'null,null,null,null', 'false'),
 ('Prajwal patil40294054', 'Prajwal patil', '40294054', 'patilprajwal982@gmail.com', '', '2021-04-29', 'SADSA,MHOW,MADHYA PRADESH,453441', 'false'),
 ('0', 'dsfsf', '555555555555', 'abc@abc', 'O+', '', '', 'false'),
 ('0', 'dsfsf', '78654364535', 'abc@abc', 'O+', '', '', 'false'),
+('Roh50947', 'Rohit Sharma', '9827650947', 'roh@123', 'O+', '2021-04-29', 'dhanka,Indore,Not Specified,453441', 'false'),
 ('Nil48990', 'Nilesh Vishwakarma', '9977548990', 'nilesh.vishwakarmasdbc@gmail.com', 'AB+', '2021-04-29', 'gsdgds,BHIWANI,Opposite of madan warehouse,127021', 'false');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `blood_request`
+--
+ALTER TABLE `blood_request`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `request`
