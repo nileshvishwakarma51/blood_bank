@@ -203,10 +203,13 @@
                     data: {id: id},
                     success: function (data)
                     {
-                        if (data) {
-                            $("#result").html("Not found");
-                        } else {
+                        var result = $.trim(data);
+                        if (result==="true") {
                             $("#aptmodel").click();
+
+                        } else {
+
+                            $("#result").html("Not found");
                         }
 
                     }

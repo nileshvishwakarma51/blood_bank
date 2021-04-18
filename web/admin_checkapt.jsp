@@ -5,7 +5,7 @@ String id= request.getParameter("id");
 
  ResultSet rs=dbutil.DButil.read("select * from request where id='"+id+"'");
 if(rs.next())
- out.println(true);
+ out.println("true");
 else
-out.println(false);
+out.println("false");
 %>
