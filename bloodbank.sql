@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2021 at 10:24 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Apr 18, 2021 at 07:18 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -44,7 +43,7 @@ CREATE TABLE `blood_stock` (
 --
 
 INSERT INTO `blood_stock` (`A+`, `A-`, `B+`, `B-`, `AB+`, `AB-`, `O+`, `O-`) VALUES
-(50, 20, 200, 46, 85, 51, 52, 10);
+(74, 20, 200, 46, 85, 51, 52, 10);
 
 -- --------------------------------------------------------
 
@@ -53,19 +52,25 @@ INSERT INTO `blood_stock` (`A+`, `A-`, `B+`, `B-`, `AB+`, `AB-`, `O+`, `O-`) VAL
 --
 
 CREATE TABLE `request` (
+  `id` varchar(110) NOT NULL,
   `name` varchar(50) NOT NULL,
   `mob` varchar(12) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `bloodgroup` varchar(10) NOT NULL
+  `bloodgroup` varchar(10) NOT NULL,
+  `appointment_date` varchar(50) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `isDonated` varchar(10) NOT NULL DEFAULT 'false'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `request`
 --
 
-INSERT INTO `request` (`name`, `mob`, `email`, `bloodgroup`) VALUES
-('dsfsf', '555555555555', 'abc@abc', 'O+'),
-('dsfsf', '78654364535', 'abc@abc', 'O+');
+INSERT INTO `request` (`id`, `name`, `mob`, `email`, `bloodgroup`, `appointment_date`, `address`, `isDonated`) VALUES
+('Prajwal patil40294054', 'Prajwal patil', '40294054', 'patilprajwal982@gmail.com', '', '2021-04-29', 'SADSA,MHOW,MADHYA PRADESH,453441', 'false'),
+('0', 'dsfsf', '555555555555', 'abc@abc', 'O+', '', '', 'false'),
+('0', 'dsfsf', '78654364535', 'abc@abc', 'O+', '', '', 'false'),
+('Nil48990', 'Nilesh Vishwakarma', '9977548990', 'nilesh.vishwakarmasdbc@gmail.com', 'AB+', '2021-04-29', 'gsdgds,BHIWANI,Opposite of madan warehouse,127021', 'false');
 
 --
 -- Indexes for dumped tables

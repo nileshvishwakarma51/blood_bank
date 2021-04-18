@@ -9,8 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="shortcut icon" href="assets/images/fav.jpg">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/plugins/grid-gallery/css/grid-gallery.min.css">
         <link rel="stylesheet" href="assets/css/datepicker.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
@@ -180,9 +180,23 @@
                                 <div class="row form-row">
                                     <input type="text" placeholder="Enter Email Adreess" class="form-control" name="email">
                                 </div>
-                                <div class="row form-row">
-                                    <input type="text" placeholder="Enter Your Blood Group" class="form-control" name="blood_grp">
-                                </div>
+                                
+                                 <div class="row form-row">
+                                        <select class="form-control" name="blood_grp">
+                                            <option selected disabled>Select You Blood Group</option>
+                                            <option value="">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option class="text-danger" value="">Not Sure</option>
+                                        </select>
+                                    </div>
+                                
+                                
                                 <div class="row form-row">
                                     <input id="dat" name="Date" type="date" placeholder="Appointment Date" class="form-control"  required>
                                     <div class="valid-feedback" style="display: none;">

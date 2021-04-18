@@ -8,8 +8,8 @@
         <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="assets/images/fav.jpg">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/plugins/grid-gallery/css/grid-gallery.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     </head>
