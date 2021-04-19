@@ -242,7 +242,13 @@
                 data: {blood:blood,unit:unit,name:name,phone:phone},
                 success: function (data)
                 {
+                    if(data>0)
+                    {
+                        window.location.href = "requestblood_recipt.jsp";
+                    }
+                    else{
                     $("#result").html(data);
+                }
                 }
             });
             });

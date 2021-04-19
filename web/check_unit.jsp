@@ -7,20 +7,20 @@
     String name = request.getParameter("name");
     String phone = request.getParameter("phone");
     System.out.println(blood);
-    ResultSet rs = dbutil.DButil.read("select `"+blood+"` from blood_stock");
-    System.out.println("select '"+blood+"' from blood_stock");
+    ResultSet rs = dbutil.DButil.read("select `" + blood + "` from blood_stock");
+    System.out.println("select '" + blood + "' from blood_stock");
     rs.next();
-    int stock= Integer.parseInt(rs.getString(1));
-    if(intunit<stock){
-   out.print("<div class='text-success'>Stock is Available</div>");
-//   request.setAttribute("name", name);
-//   request.setAttribute("phone", phone);
-//   request.setAttribute("unit", unit);
-//   request.setAttribute("blood", blood);
-//   response.sendRedirect("insert_requestblood.jsp");
-    }
-    else{
-    out.print("<div class='text-danger'> "+blood+" of "+unit+"unit  Not in Stock </div>");
+    int stock = Integer.parseInt(rs.getString(1));
+    if (intunit < stock) {
+        
+        String qry = "INSERT INTO `blood_request` (`id`, `name`, `phone`, `bloodtype`, `units`) VALUES ('" + name.substring(0, 3) + phone.substring(5) + "', '" + name + "', '" + phone + "', '" + blood + "', '" + unit + "');";
+
+        dbutil.DButil.insert(qry);
+        session.setAttribute("phone", phone);
+       out.print(1);
+      
+    } else {
+        out.print("<div class='text-danger'> " + blood + " of " + unit + "unit  Not in Stock </div>");
     }
 
 %>
