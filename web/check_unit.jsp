@@ -1,6 +1,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="dbutil.DButil"%>
 <%
+    System.out.println("chala");
     String unit = request.getParameter("unit");
     int intunit = Integer.parseInt(unit);
     String blood = request.getParameter("blood");
@@ -20,7 +21,7 @@
        out.print(1);
       
     } else {
-        out.print("<div class='text-danger'> " + blood + " of " + unit + "unit  Not in Stock </div>");
+        out.print("<div class='text-danger'> " + unit + " unit of " +blood  + " Not in Stock! </div>");
     }
 
 %>
