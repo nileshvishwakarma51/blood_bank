@@ -4,14 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/check_date.jsp</file>
-            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/check_cerificate.jsp</file>
+            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/request_blood.jsp</file>
             <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/admin_donar.jsp</file>
-            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/requestblood_recipt.jsp</file>
+            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/about.jsp</file>
             <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/admin.jsp</file>
-            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/certificate.jsp</file>
+            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/appointment.jsp</file>
             <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/update_donor.jsp</file>
-            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/download_certi.jsp</file>
-            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/check_unit.jsp</file>
+            <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/get_appointment.jsp</file>
             <file>file:/C:/Users/prajw/OneDrive/Documents/GitHub/blood_bank/web/index.jsp</file>
         </group>
     </open-files>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2021 at 07:44 PM
+-- Generation Time: Apr 20, 2021 at 12:43 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -40,7 +40,14 @@ CREATE TABLE `blood_request` (
 --
 
 INSERT INTO `blood_request` (`id`, `name`, `phone`, `bloodtype`, `units`) VALUES
-('praj94054', 'prajwal patil', '9340294054', 'A+', 11);
+('Gau423', 'Gaurav Patil', '23423423', 'A-', 12),
+('hrf', 'hrfdgdfgd', '23423', 'B+', 12),
+('Pra0294054', 'Prajwal patil', '+19340294054', 'B+', 21),
+('praj94054', 'prajwal patil', '9340294054', 'A+', 11),
+('sac3423', 'sachine singh', '354353423', 'A+', 12),
+('sdf3', 'sdfgdffsdfsd', '456453', 'A-', 2),
+('sdf4', 'sdfd', '324234', 'B-', 1),
+('Sna7567', 'Snajay Singh', '787567567', 'B+', 12);
 
 -- --------------------------------------------------------
 
@@ -78,22 +85,22 @@ CREATE TABLE `request` (
   `mob` varchar(12) NOT NULL,
   `email` varchar(50) NOT NULL,
   `bloodgroup` varchar(10) NOT NULL,
-  `appointment_date` varchar(50) NOT NULL,
+  `appointment_date` date NOT NULL,
   `address` varchar(50) NOT NULL,
-  `isDonated` varchar(10) NOT NULL DEFAULT 'false'
+  `isDonated` varchar(10) NOT NULL DEFAULT 'false',
+  `units` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `request`
 --
 
-INSERT INTO `request` (`id`, `name`, `mob`, `email`, `bloodgroup`, `appointment_date`, `address`, `isDonated`) VALUES
-('pin42343', 'pintu', '3242342343', 'null', 'null', 'null', 'null,null,null,null', 'false'),
-('Prajwal patil40294054', 'Prajwal patil', '40294054', 'patilprajwal982@gmail.com', '', '2021-04-29', 'SADSA,MHOW,MADHYA PRADESH,453441', 'false'),
-('0', 'dsfsf', '555555555555', 'abc@abc', 'O+', '', '', 'false'),
-('0', 'dsfsf', '78654364535', 'abc@abc', 'O+', '', '', 'false'),
-('Roh50947', 'Rohit Sharma', '9827650947', 'roh@123', 'O+', '2021-04-29', 'dhanka,Indore,Not Specified,453441', 'false'),
-('Nil48990', 'Nilesh Vishwakarma', '9977548990', 'nilesh.vishwakarmasdbc@gmail.com', 'AB+', '2021-04-29', 'gsdgds,BHIWANI,Opposite of madan warehouse,127021', 'false');
+INSERT INTO `request` (`id`, `name`, `mob`, `email`, `bloodgroup`, `appointment_date`, `address`, `isDonated`, `units`) VALUES
+('nay3423', 'nayan', '232423423', 'nayan@gamil.com', 'B+', '2021-04-28', 'erwerew,weeweq,ewqeqwe,wqe', 'false', 0),
+('ere543', 'eren yeager', '43534543', 'eren@gmail.com', 'B-', '2021-04-28', 'fdgd,sdfds,sdfds,sdf', 'true', 12),
+('bhu88', 'bhupesh singh', '7989788', 'bhupi@1gmail.com', 'B+', '2021-04-23', 'Stsdfisd,sidfjsdi,jfsdfdsj,dsfdsf', 'true', 12),
+('Roh50947', 'Rohit Sharma', '9827650947', 'roh@123', 'O+', '2021-04-29', 'dhanka,Indore,Not Specified,453441', 'false', 0),
+('Nil48990', 'Nilesh Vishwakarma', '9977548990', 'nilesh.vishwakarmasdbc@gmail.com', 'AB+', '2021-04-29', 'gsdgds,BHIWANI,Opposite of madan warehouse,127021', 'false', 0);
 
 --
 -- Indexes for dumped tables
