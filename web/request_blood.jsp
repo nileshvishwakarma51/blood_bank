@@ -180,7 +180,7 @@
 
 
                                     <div class="row form-row">
-                                        <select id="bloodtype" class="form-control" name="blood_grp">
+                                        <select id="bloodtype" class="form-control" name="blood_grp" required>
                                             <option selected disabled>Select Your Blood Group</option>
                                             <option value="A+">A+</option>
                                             <option value="A-">A-</option>

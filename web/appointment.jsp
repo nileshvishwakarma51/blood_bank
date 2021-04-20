@@ -178,11 +178,11 @@
                                         <input type="tel" placeholder="Enter Mobile Number" class="form-control" name="phone" required>
                                     </div>
                                     <div class="row form-row">
-                                        <input type="text" placeholder="Enter Email Adreess" class="form-control" name="email">
+                                        <input type="text" placeholder="Enter Email Adreess" class="form-control" name="email" required>
                                     </div>
 
                                     <div class="row form-row">
-                                        <select class="form-control" name="blood_grp">
+                                        <select class="form-control" name="blood_grp" required>
                                             <option selected disabled>Select Your Blood Group</option>
                                             <option value="A+">A+</option>
                                             <option value="A-">A-</option>

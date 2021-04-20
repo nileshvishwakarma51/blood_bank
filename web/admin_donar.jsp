@@ -15,23 +15,81 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <style>
+             .sidenav {
+                height: 100%; /* 100% Full-height */
+                width: 0; /* 0 width - change this with JavaScript */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Stay on top */
+                top: 0; /* Stay at the top */
+                left: 0;
+                background-color: #111; /* Black*/
+                overflow-x: hidden; /* Disable horizontal scroll */
+                padding-top: 60px; /* Place content 60px from the top */
+                transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+            }
 
+            /* The navigation menu links */
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            /* When you mouse over the navigation links, change their color */
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+            /* Position and style the close button (top right corner) */
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+            #main {
+                transition: margin-left .5s;
+                padding: 20px;
+            }
+
+            /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+
+        </style>
     </head>
     <body> 
 
-        <!-- Navigation -->
-        <nav class=" navbar navbar-dark bg-dark">
-            <a class="navbar-brand text-white">Admin Panel</a> 
 
-            <a class="btn btn-primary btn-lg" href="index.jsp" target="self"
-               role="button">Logout</a>
-        </nav>
+   <div class="navbar navbar-dark bg-dark">
 
+            <span class="fa fa-bars fa-2x" style="color:white;" onclick="openNav()" ></span>
+            <div class=" text-white " style="margin-right: 50%; font-size: 25px;">Admin DashBoard</div>
+
+        </div>
 
 
         <div class="container ">
+                    <!-- Navigation -->
+       
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="admin.jsp">Blood Stock</a>
+            <a href="admin_donar.jsp">Blood Donars</a>
+            <a href="#">Clients</a>
+            <a href="index.jsp">Logout</a>
+        </div>
             <div class="row mt-5">
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <div>
                         <input id="aptid"  type="text">
                         <button class="btn " onclick="checkAptid()" >Check Aptmt</button>
@@ -48,7 +106,7 @@
 
                     <form class="form-inline">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeyup="myFunction()" id="myInput">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
 
                 </div>
@@ -70,7 +128,7 @@
                 </thead>
 
                 <tbody><%
-                    rs = DButil.read("SELECT * FROM request");
+                    rs = DButil.read("SELECT * FROM request where isDonated = 'true'");
                     int sno = 0;
                     if (rs != null) {
                         while (rs.next()) {%>
@@ -142,7 +200,14 @@
 
 
         <script>
+    function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
 
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
 
 
 
